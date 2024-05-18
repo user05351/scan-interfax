@@ -1,0 +1,284 @@
+@import "../../styles/_globals.scss";
+
+.form {
+	display: flex;
+	gap: 10px;
+	box-shadow: 0px 0px 20px $inactive-text-color;
+	padding: 20px 40px 30px 40px;
+	border-radius: 10px;
+	width: 872px;
+	margin-bottom: 65px;
+
+	@media (max-width: 1200px) {
+		max-width: 772px;
+		padding: 10px 30px 20px 30px;
+	}
+
+	@media (max-width: 991.98px) {
+		max-width: 620px;
+	}
+
+	@media (max-width: 767.98px) {
+		max-width: 375px;
+		padding: 30px 14px 30px 14px;
+		margin-bottom: 0px;
+		flex-direction: column;
+	}
+
+	> .form__block-input {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@media (max-width: 767.98px) {
+			width: 100%;
+		}
+
+		> .form__block-select {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			> .form__label-select {
+				font-size: 1.3em;
+			}
+
+			> select {
+				width: 242px;
+				height: 43px;
+				border-radius: 5px;
+				border: 1px solid $no-active-color;
+				outline: none;
+				padding: 13px 20px;
+				appearance: none;
+				background: url('/svg/arrow-tip-search.svg') no-repeat right
+					15px top 10px;
+				background-size: 25px 25px;
+
+				@media (max-width: 991.98px) {
+					width: 180px;
+				}
+
+				@media (max-width: 767.98px) {
+					font-size: 1em;
+					width: 100%;
+				}
+			}
+		}
+
+		> .form__block-data-input {
+			display: flex;
+			gap: 20px;
+
+			@media (max-width: 991.98px) {
+				flex-direction: column;
+			}
+
+			> label {
+				width: 176px;
+
+				@media (max-width: 991.98px) {
+					max-width: 146px;
+				}
+
+				@media (max-width: 767.98px) {
+					font-size: 1.3em;
+				}
+
+				.start_data_noBefore {
+					margin-top: 20px;
+					width: 176px;
+					height: 43px;
+					padding: 13px 12px 13px 44px;
+					outline: none;
+					border: 1px solid $no-active-color;
+					border-radius: 5px;
+					position: relative;
+					color: rgba($second-color, $alpha: 0);
+
+					@media (max-width: 767.98px) {
+						width: 348px;
+					}
+
+					&::-webkit-clear-button,
+					&::-webkit-inner-spin-button {
+						display: none;
+					}
+
+					&::-webkit-calendar-picker-indicator {
+						margin-top: 10px;
+						background: url('/svg/arrow-tip-search.svg') no-repeat;
+						background-size: contain;
+						width: 20px;
+						height: 20px;
+						opacity: 1;
+					}
+				}
+
+				.start_data {
+					margin-top: 20px;
+					width: 176px;
+					height: 43px;
+					padding: 13px 12px 13px 44px;
+					outline: none;
+					border: 1px solid $no-active-color;
+					border-radius: 5px;
+					position: relative;
+					color: rgba($second-color, $alpha: 0);
+
+					@media (max-width: 767.98px) {
+						width: 348px;
+					}
+
+					&::-webkit-clear-button,
+					&::-webkit-inner-spin-button {
+						display: none;
+					}
+
+					&::-webkit-calendar-picker-indicator {
+						margin-top: 10px;
+						background: url('/svg/arrow-tip-search.svg') no-repeat;
+						background-size: contain;
+						width: 20px;
+						height: 20px;
+						opacity: 1;
+					}
+
+					&::before {
+						content: 'Дата начала';
+						position: absolute;
+						top: 50%;
+						left: 38px;
+						transform: translateY(-50%);
+						pointer-events: none;
+						color: #aaa;
+					}
+				}
+			}
+
+			.end_data_noBefore {
+				margin-top: 42px;
+				width: 176px;
+				height: 43px;
+				padding: 13px 12px 13px 44px;
+				outline: none;
+				border: 1px solid $no-active-color;
+				border-radius: 5px;
+				position: relative;
+
+				@media (max-width: 991.98px) {
+					margin-top: 10px;
+				}
+
+				@media (max-width: 767.98px) {
+					width: 348px;
+				}
+
+				&::-webkit-clear-button,
+				&::-webkit-inner-spin-button {
+					display: none;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					margin-top: 10px;
+					background: url('/svg/arrow-tip-search.svg') no-repeat;
+					background-size: contain;
+					width: 20px;
+					height: 20px;
+					opacity: 1;
+				}
+			}
+
+			.end_data {
+				margin-top: 42px;
+				width: 176px;
+				height: 43px;
+				padding: 13px 12px 13px 44px;
+				outline: none;
+				border: 1px solid $no-active-color;
+				border-radius: 5px;
+				position: relative;
+
+				@media (max-width: 991.98px) {
+					margin-top: 10px;
+				}
+
+				@media (max-width: 767.98px) {
+					width: 348px;
+				}
+
+				&::-webkit-clear-button,
+				&::-webkit-inner-spin-button {
+					display: none;
+				}
+
+				&::-webkit-calendar-picker-indicator {
+					margin-top: 10px;
+					background: url('/svg/arrow-tip-search.svg') no-repeat;
+					background-size: contain;
+					width: 20px;
+					height: 20px;
+					opacity: 1;
+				}
+
+				&::before {
+					content: 'Дата конца';
+					position: absolute;
+					top: 50%;
+					left: 38px;
+					transform: translateY(-50%);
+					pointer-events: none;
+					color: #aaa;
+				}
+			}
+		}
+	}
+	> .form__block-checkbox {
+		display: flex;
+		flex-direction: column;
+		padding-top: 15px;
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			margin-bottom: 130px;
+
+			@media (max-width: 1200px) {
+				margin-bottom: 85px;
+			}
+
+			@media (max-width: 767.98px) {
+				display: none;
+			}
+		}
+
+		> .button-search {
+			width: 305px;
+			height: 60px;
+			color: $third-color;
+			background-color: $sixth-color;
+			border-radius: 5px;
+			font-size: 1.2em;
+			align-self: flex-end;
+
+			@media (max-width: 767.98px) {
+				align-self: center;
+				width: 100%;
+			}
+		}
+
+		> .form__help {
+			margin-top: 10px;
+			font-size: .8em;
+			color: $no-active-color;
+			align-self: center;
+			padding-left: 25px;
+
+			@media (max-width: 767.98px) {
+				align-self: flex-start;
+				width: 100%;
+			}
+		}
+	}
+}

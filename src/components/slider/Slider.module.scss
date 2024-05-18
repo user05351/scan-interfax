@@ -1,0 +1,67 @@
+@import "../../styles/_globals.scss";
+
+.wrapper {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 1500px) {
+		justify-content: center;
+	}
+
+	@media (max-width: 991.98px) {
+		align-self: center;
+	}
+
+	> .block-advantages {
+		font-family: "Inter";
+		font-weight: 400;
+		display: flex;
+		gap: 30px;
+
+		@media (max-width: 991.98px) {
+			gap: 25px;
+		}
+
+		> .block-advantages__advantage {
+			width: 400px;
+			padding: 30px 20px;
+			box-shadow: 0px 0px 20px rgba($second-color, $alpha: .2);
+			border-radius: 10px;
+
+			@media (max-width: 1500px) {
+				width: 370px;
+			}
+
+			@media (max-width: 1200px) {
+				width: 320px;
+			}
+
+			@media (max-width: 991.98px) {
+				width: 310px;
+			}
+
+			@media (max-width: 767.98px) {
+				max-width: 298px;
+				height: 188px;
+			}
+
+			> img {
+				width: 64px;
+				height: 64px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	> button {
+		width: 64px;
+		height: 64px;
+		cursor: pointer;
+		background-color: rgba($second-color, $alpha: 0);
+
+		@media (max-width: 991.98px) {
+			width: 39px;
+			height: 39px;
+		}
+	}
+}

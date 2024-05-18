@@ -1,0 +1,16 @@
+$first-color: rgba(2, 148, 145, 1);
+$second-color: rgb(0, 0, 0);
+$third-color: rgb(255, 255, 255);
+$fourth-color: rgba(255, 182, 79, 1);
+$fifth-color: rgba(124, 227, 225, 1);
+$sixth-color: rgba(89, 112, 255, 1);
+
+$no-active-color: rgba(199, 199, 199, 1);
+
+$inactive-text-color: rgba(
+	$second-color,
+	$alpha: .4,
+);
+
+$regular-font-size: 1.125rem;
+$small-font-size: .875rem;

@@ -1,0 +1,174 @@
+@import "../../../styles/_globals.scss";
+
+.wrapper {
+	font-family: "Inter";
+	background-color: $first-color;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (max-width: 767.98px) {
+		padding: 0px 20px;
+	}
+
+	@media (max-width: 479.98px) {
+		padding: 0px 15px;
+	}
+
+	> div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 35px;
+		width: 100%;
+		> .logo {
+			width: 111px;
+			height: 111px;
+		}
+
+		> button {
+			width: 24px;
+			height: 24px;
+			background-color: rgba($second-color, $alpha: 0);
+
+			> .exit {
+				width: 24px;
+				height: 24px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	> nav {
+		margin-bottom: 75px;
+		> .menu {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 25px;
+			a {
+				font-size: 1.2em;
+				color: $third-color;
+			}
+		}
+	}
+}
+
+.noneButton {
+	background-color: rgba($third-color, $alpha: 0);
+	cursor: pointer;
+	color: rgba(255, 255, 255, 1);
+	opacity: .4;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+.mobile_burger {
+	background-color: $fifth-color;
+	color: $second-color;
+	width: 295px;
+	height: 51px;
+	border-radius: 5px;
+	font-size: 1.4em;
+	cursor: pointer;
+}
+
+.block_company {
+	width: 175px;
+	height: 63px;
+	background-color: rgba(217, 217, 217, .3);
+	border-radius: 5px;
+	padding: 14px 12px 14px 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+
+	@media (max-width: 1200px) {
+		right: 16%;
+	}
+
+	@media (max-width: 991.98px) {
+		max-width: 132px;
+		right: 17.9%;
+		height: 75px;
+		padding-top: 5px;
+	}
+
+	@media (max-width: 767.98px) {
+		max-width: 145px;
+	}
+
+	> .block_usedCompany {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+			padding-left: 12px;
+		}
+
+		> .used_paragraph {
+			font-size: .55em;
+			opacity: .4;
+		}
+
+		.used_company {
+			font-size: .77em;
+			font-weight: 700;
+			color: $second-color;
+		}
+	}
+
+	> .block_companyLimit {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+		}
+
+		> .limit_paragraph {
+			font-size: .55em;
+			opacity: .4;
+		}
+
+		> .limit_company {
+			font-size: .77em;
+			font-weight: 700;
+			color: rgba(138, 197, 64, 1);
+		}
+	}
+}
+
+.block_avatar {
+	display: flex;
+	gap: 4px;
+	max-width: 150px;
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		> p {
+			font-size: .77em;
+			margin-bottom: 3px;
+			color: rgba($second-color, $alpha: .7);
+		}
+
+		> button {
+			background-color: rgba($second-color, $alpha: 0);
+			color: rgba($second-color, $alpha: .4);
+			font-size: .55em;
+			cursor: pointer;
+		}
+	}
+
+	> img {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+	}
+}

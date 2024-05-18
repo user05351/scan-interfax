@@ -1,0 +1,52 @@
+@import "../../styles/_globals.scss";
+
+.footer {
+	font-family: "Inter";
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $first-color;
+	padding: 0px 60px;
+
+	@media (max-width: 1500px) {
+		padding: 0px 40px;
+	}
+
+	@media (max-width: 991.98px) {
+		padding: 0px 30px;
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 0px 20px;
+	}
+
+	@media (max-width: 479.98px) {
+		padding: 0px 15px;
+	}
+
+	> img {
+		width: 141px;
+		height: 141px;
+
+		@media (max-width: 991.98px) {
+			width: 111px;
+			height: 111px;
+		}
+	}
+
+	> .footer__contact-block {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		align-items: flex-end;
+		color: $third-color;
+
+		a {
+			color: $third-color;
+		}
+
+		> .footer__mail {
+			margin-bottom: 15px;
+		}
+	}
+}
